@@ -83,21 +83,30 @@ textarea:not([rows]) {
   --clr-orange-900: #DB4C40;
   --clr-yellow-300: #F0C987;
   --clr-white: #FFF;
+  
+
+  --clr-primary: var(--clr-purple-900);
+  --clr-secondary: var(--clr-orange-900);
+  --clr-f-primary: var(--clr-white);
 
   --clr-body: grey;
   --fs-32: 2rem;
-  --f-clr-default: var(--clr-white);
 }
 
 body {
   background-color: var(--clr-purple-900);
 }
 
+.wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
 .center-div{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .ff-primary{
@@ -110,16 +119,17 @@ button {
 
 .button-1{
   font-size: var(--fs-32);
-  color: var(--f-clr-default);
+  color: var(--clr-f-primary);
   padding: .4em .8em;
   transition: all ease-in-out .5s;
   background-color: var(--clr-orange-900);
-  border: 2px solid var(--clr-yellow-300);
 }
 
 .button-1:hover {
   padding: .6em 1.5em;
-  border-radius: 10px;
+  transform: scale(1.1);
+  filter: drop-shadow(9px 9px rgba(179, 179, 179, 0.55));
+  /* transform: translate(-1.5rem, -1.5rem); */
 }
 
 
