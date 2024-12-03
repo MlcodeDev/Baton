@@ -28,13 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
       return randomScheme;
     }
 
-    static applyRandomScheme(bodyElement, buttonElement) {
+    static applyRandomScheme(
+      bodyElement,
+      buttonElement,
+      textElement = undefined,
+    ) {
       const randomScheme = ColorScheme.getRandomScheme;
 
       bodyElement.style.backgroundColor = randomScheme.primary;
       buttonElement.style.backgroundColor = randomScheme.secondary;
       buttonElement.style.color = randomScheme.font_color;
       buttonElement.style.fontFamily = randomScheme.font;
+      textElement.style.color = randomScheme.font_color;
     }
   }
   // Old color schemes
@@ -57,10 +62,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const body = document.querySelector("body");
   const button = document.querySelector(".button-1");
+  const count = document.querySelector(".click-count");
 
   body.style.transition = "background-color 0.5s ease-in-out";
+  count.style.transition = "all 0.5s ease";
 
+  let clickCount = 0;
   button.addEventListener("click", () => {
-    ColorScheme.applyRandomScheme(body, button);
+    ColorScheme.applyRandomScheme(body, button, count);
+
+    clickCount++;
+    count.textContent = `clicks: ${clickCount}`;
   });
 });

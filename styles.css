@@ -115,6 +115,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
 }
 
 .ff-primary{
@@ -129,6 +133,10 @@ body {
   font-weight: var(--fw-500);
 }
 
+.clr-f-primary{
+  /* color: var(--clr-f-primary); */
+  color: white; 
+}
 button {
   border: none; 
   color: var(--clr-f-primary);
@@ -153,3 +161,21 @@ button:focus:hover{
   border: 2px solid var(--clr-shadow);
 }
 
+.click-count {
+  display: inline-block;
+  letter-spacing: .15rem;
+  font-size: 50px;
+  position: absolute;
+  /* I ain't makin responisve all that' */
+  bottom: 100px;
+  margin-bottom: 80px;
+  left: -150px;
+  color: var(--clr-f-primary);
+  filter:opacity(0.5);
+  transform: rotate(-90deg);
+  width: 10ch;
+}
+
+.wrapper div {
+  height: 100%; 
+}
