@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const count = document.querySelector(".click-count");
 
   body.style.transition = "background-color 0.5s ease-in-out";
-  count.style.transition = "all 0.5s ease";
+  count.style.transition = "all 0.5s";
 
   let clickCount = 0;
   button.addEventListener("click", () => {
