@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     static applyRandomScheme(
       bodyElement,
       buttonElement,
+      secondButtonElement = undefined,
       textElement = undefined,
     ) {
       const randomScheme = ColorScheme.getRandomScheme;
@@ -40,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
       buttonElement.style.color = randomScheme.font_color;
       buttonElement.style.fontFamily = randomScheme.font;
       textElement.style.color = randomScheme.font_color;
+      secondButtonElement.style.backgroundColor = randomScheme.secondary;
+      secondButtonElement.style.color = randomScheme.font_color;
+      secondButtonElement.style.fontFamily = randomScheme.font;
     }
   }
 
@@ -58,13 +62,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body");
   const button = document.querySelector(".button-1");
   const count = document.querySelector(".click-count");
+  const reset_button = document.querySelector(".reset-btn");
 
   body.style.transition = "background-color 0.5s ease-in-out";
   count.style.transition = "all 0.5s";
 
   let clickCount = 0;
   button.addEventListener("click", () => {
-    ColorScheme.applyRandomScheme(body, button, count);
+    ColorScheme.applyRandomScheme(body, button, reset_button, count);
 
     clickCount++;
     count.textContent = `clicks: ${clickCount}`;
@@ -97,9 +102,17 @@ document.addEventListener("DOMContentLoaded", () => {
       case 9:
         button.textContent = `Kierowniku weź no kliknij dziewiąty raz`;
         break;
+      case 50:
+        window.location.href = "https://www.youtube.com/watch?v=NYvQPyk6t0w"; 
+        break;
     }
     if (clickCount >= 10) {
       button.textContent = `Dziemkujem kierowniku :)`;
     }
+  });
+  reset_button.addEventListener("click", () => {
+    console.log("Reset button clicked!");
+    clickCount = 0;
+    count.textContent = `clicks: ${clickCount}`;
   });
 });

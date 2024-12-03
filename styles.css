@@ -140,13 +140,13 @@ body {
 button {
   border: none; 
   color: var(--clr-f-primary);
+  padding: .4em .8em;
+  transition: all ease-in-out .5s;
+  background-color: var(--clr-orange-900);
 }
 
 .button-1{
   font-size: var(--fs-32);
-  padding: .4em .8em;
-  transition: all ease-in-out .5s;
-  background-color: var(--clr-orange-900);
 }
 
 button:hover {
@@ -178,4 +178,9 @@ button:focus:hover{
 
 .wrapper div {
   height: 100%; 
+}
+
+.reset-btn{
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }
