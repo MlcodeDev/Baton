@@ -73,5 +73,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     clickCount++;
     count.textContent = `clicks: ${clickCount}`;
+
+    switch (clickCount) {
+      case 1:
+        button.textContent = `Kierowniku weź no kliknij jeszcze raz`;
+        break;
+      case 2:
+        button.textContent = `Kierowniku weź no kliknij drugi raz`;
+        break;
+      case 3:
+        button.textContent = `Kierowniku weź no kliknij trzeci raz`;
+        break;
+      case 4:
+        button.textContent = `Kierowniku weź no kliknij czwarty raz`;
+        break;
+      case 5:
+        button.textContent = `Kierowniku weź no kliknij piąty raz`;
+        break;
+      case 6:
+        button.textContent = `Kierowniku weź no kliknij szósty raz`;
+        break;
+      case 7:
+        button.textContent = `Kierowniku weź no kliknij siódmy raz`;
+        break;
+      case 8:
+        button.textContent = `Kierowniku weź no kliknij ósmy raz`;
+        break;
+      case 9:
+        button.textContent = `Kierowniku weź no kliknij dziewiąty raz`;
+        break;
+    }
+    if (clickCount >= 10) {
+      button.textContent = `Dziemkujem kierowniku :)`;
+    }
   });
 });
