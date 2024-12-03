@@ -77,8 +77,15 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+@font-face {
+  font-family: 'retro-stereo-wide';
+  src: url('assets/fonts/retro-stereo-wide.ttf') format('truetype');
+}
+
 :root{
   --ff-primary: "Inter", sans-serif;
+  --ff-secondary: 'retro-stereo-wide';
+
   --clr-purple-900: #3C153B;
   --clr-orange-900: #DB4C40;
   --clr-yellow-300: #F0C987;
@@ -112,6 +119,10 @@ body {
 
 .ff-primary{
   font-family: var(--ff-primary);
+}
+
+.ff-secondary{
+  font-family: var(--ff-secondary);
 }
 
 .fw-500{
