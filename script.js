@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body");
   const button = document.querySelector(".button-1");
 
+  body.style.transition = "background-color 0.5s ease-in-out";
+
   button.addEventListener("click", () => {
     ColorScheme.applyRandomScheme(body, button);
   });
